@@ -254,11 +254,11 @@ ComponentV2::ComponentV2(
   cloned_directory_ptr_.set_error_handler(
       [this](zx_status_t status) { cloned_directory_ptr_.Unbind(); });
 
-  // TODO(fxb/50694): Close handles from ComponentStartInfo::numbered_handles
+  // TODO(fxb/akbiggs): Close handles from ComponentStartInfo::numbered_handles
   // since we're not using them. See documentation from ComponentController:
   // https://cs.opensource.google/fuchsia/fuchsia/+/main:sdk/fidl/fuchsia.component.runner/component_runner.fidl;l=97;drc=e3b39f2b57e720770773b857feca4f770ee0619e
 
-  // TODO(fxb/50694): There's an OnPublishDiagnostics event we may want to
+  // TODO(fxb/akbiggs): There's an OnPublishDiagnostics event we may want to
   // fire for diagnostics. See documentation from ComponentController:
   // https://cs.opensource.google/fuchsia/fuchsia/+/main:sdk/fidl/fuchsia.component.runner/component_runner.fidl;l=181;drc=e3b39f2b57e720770773b857feca4f770ee0619e
 
